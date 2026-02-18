@@ -4,6 +4,7 @@ import Home from "../pages/Home/Home";
 import ApplyForm from "../pages/ApplyForm/ApplyForm";
 import JobDetail from "../pages/Jobs/JobDetail";
 import JobList from "../pages/Jobs/JobList";
+import Success from "../pages/ApplyForm/Success";
 
 export default function AppRoutes() {
   return (
@@ -12,7 +13,7 @@ export default function AppRoutes() {
       <Route path="/jobs/" element={<JobList />} />
       <Route path="/jobs/:id" element={<JobDetail />} />
       <Route path="/apply/:id" element={<ApplyForm />} />
-      {/* <Route path="/apply/:id/success" element={<Success />} /> */}
+      <Route path="/apply/:id/success" element={<Success />} />
     </Routes>
   );
 }

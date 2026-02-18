@@ -15,12 +15,12 @@ export default function ApplyGenInfo({ formData, handleChange, errors }) {
       />
 
       <TextField
-        error={formData.lastName ? false : true}
         label="Last Name"
         value={formData.lastName}
         onChange={(e) => handleChange("lastName", e.target.value)}
         fullWidth
-        helperText={formData.lastName ? null : "Last name cannot be blank"}
+        error={errors.lastName}
+        helperText={errors.lastName}
       />
 
       <TextField
@@ -28,6 +28,8 @@ export default function ApplyGenInfo({ formData, handleChange, errors }) {
         value={formData.email}
         onChange={(e) => handleChange("email", e.target.value)}
         fullWidth
+        error={errors.email}
+        helperText={errors.email}
       />
     </Stack>
   );

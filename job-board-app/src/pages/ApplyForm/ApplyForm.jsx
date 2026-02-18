@@ -28,6 +28,11 @@ export default function ApplyForm() {
       ...prev,
       [field]: value,
     }));
+
+    setErrors((prev) => ({
+      ...prev,
+      [field]: "",
+    }));
   };
 
   const validateStep = () => {
@@ -37,11 +42,9 @@ export default function ApplyForm() {
       if (!formData.firstName.trim()) {
         newErrors.firstName = "First name is required";
       }
-
       if (!formData.lastName.trim()) {
         newErrors.lastName = "Last name is required";
       }
-
       if (!formData.email.trim()) {
         newErrors.email = "Email is required";
       }
@@ -49,7 +52,7 @@ export default function ApplyForm() {
 
     setErrors(newErrors);
 
-    return Object.keys(newErrors).length === 0;
+    return  Object.keys(newErrors).length === 0;
   };
 
   const handleNext = () => {
@@ -57,6 +60,10 @@ export default function ApplyForm() {
 
     if (currentStep < steps.length - 1) {
       setCurrentStep((prev) => prev + 1);
+    }
+
+    if (currentStep === steps.length - 1) {
+
     }
   };
 
