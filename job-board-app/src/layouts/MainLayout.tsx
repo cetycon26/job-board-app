@@ -7,7 +7,6 @@ export default function MainLayout({ children }: React.PropsWithChildren) {
       <main>
         <NavBar />
         {children}
-        <Footer />
       </main>
     </>
   );
@@ -18,7 +17,7 @@ function NavBar() {
     <nav className="navbar">
       <div className="navbar-left">
         <a href="/" className="logo">
-          CJobsNow
+          Clarity
         </a>
       </div>
       <div className="navbar-center">

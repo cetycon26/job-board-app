@@ -6,6 +6,14 @@ export const jobs = [
     location: "Remote",
     description: "Build modern UI applications using React.",
     salaryRange: [60000, 65000],
+    details: [
+      "Health insurance",
+      "Dental insurance",
+      "Vision insurance",
+      "401k",
+      "PTO",
+      "Remote-friendly",
+    ],
     employment: "Full-time",
     applied: false,
   },
@@ -16,6 +24,7 @@ export const jobs = [
     location: "New York",
     description: "Develop scalable APIs and services.",
     salaryRange: [80000, 95000],
+    details: ["Health insurance", "401k", "PTO", "Remote-friendly"],
     employment: "Full-time",
     applied: false,
   },
@@ -26,10 +35,17 @@ export const jobs = [
     location: "San Francisco",
     description: "Build responsive web interfaces with React.",
     salaryRange: [85000, 100000],
+    details: [
+      "Stock options",
+      "Health & dental",
+      "Gym reimbursement",
+      "Tech equipment provided",
+      "Learning stipend",
+    ],
     employment: "Full-time",
-    applied: false
-},
-{
+    applied: false,
+  },
+  {
     id: 4,
     title: "Data Analyst",
     company: "Insight Analytics",
@@ -37,19 +53,25 @@ export const jobs = [
     description: "Analyze datasets to generate actionable insights.",
     salaryRange: [65000, 80000],
     employment: "Full-time",
-    applied: false
-},
-{
+    applied: false,
+  },
+  {
     id: 5,
     title: "DevOps Engineer",
     company: "CloudStream",
     location: "Seattle",
     description: "Implement CI/CD pipelines and manage cloud infrastructure.",
     salaryRange: [90000, 110000],
+    details: [
+      "Flexible schedule",
+      "Remote work",
+      "Project-based bonus",
+      "No long-term commitment",
+    ],
     employment: "Full-time",
-    applied: false
-},
-{
+    applied: false,
+  },
+  {
     id: 6,
     title: "Mobile App Developer",
     company: "AppVibe",
@@ -58,19 +80,26 @@ export const jobs = [
     salaryRange: [80000, 95000],
     details: ["Health insurance", "Vision insurance", "PTO", "401k"],
     employment: "Full-time",
-    applied: false
-},
-{
+    applied: false,
+  },
+  {
     id: 7,
     title: "Machine Learning Engineer",
     company: "NeuroTech",
     location: "Boston",
     description: "Design and deploy ML models for enterprise applications.",
     salaryRange: [95000, 120000],
+    details: [
+      "GPU/compute stipend",
+      "Conference budget",
+      "Stock options",
+      "Flexible hours",
+      "Remote work",
+    ],
     employment: "Full-time",
-    applied: false
-},
-{
+    applied: false,
+  },
+  {
     id: 8,
     title: "Product Manager",
     company: "Innovexa",
@@ -78,27 +107,40 @@ export const jobs = [
     description: "Lead product strategy and roadmap for software products.",
     salaryRange: [90000, 115000],
     employment: "Full-time",
-    applied: false
-},
-{
+    applied: false,
+  },
+  {
     id: 9,
     title: "UI/UX Designer",
     company: "CreativeCore",
     location: "Los Angeles",
     description: "Design user interfaces and improve user experience.",
     salaryRange: [70000, 90000],
+    details: [
+      "Flexible hours",
+      "Creative freedom",
+      "Health insurance",
+      "Paid workshops",
+      "Team retreats",
+    ],
     employment: "Full-time",
-    applied: false
-},
-{
+    applied: false,
+  },
+  {
     id: 10,
     title: "Cloud Solutions Architect",
     company: "TechNimbus",
     location: "Denver",
     description: "Architect and optimize cloud infrastructure for clients.",
     salaryRange: [110000, 135000],
+    details: [
+      "Cloud training allowance",
+      "Remote work",
+      "Flexible schedule",
+      "401k",
+      "On-call rotation bonus",
+    ],
     employment: "Full-time",
-    applied: false
-}
-
+    applied: false,
+  },
 ];
