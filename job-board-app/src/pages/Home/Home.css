@@ -1,5 +1,8 @@
 .job_container {
-  background-color: black;
+  background-color: rgb(255, 255, 255);
+  border: solid rgba(0, 0, 0, 0.10) 2px;
+  border-radius: 5px;
   margin: 0 auto;
+  padding: 1rem;
   max-width: 800px;
 }
