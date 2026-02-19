@@ -1,0 +1,9 @@
+.application {
+  max-width: 50rem;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.apply_title {
+  margin-bottom: 2rem;
+}

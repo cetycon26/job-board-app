@@ -1,5 +1,9 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { jobs } from "../../data/jobs";
+import "./ApplyForm.css";
+
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
@@ -12,9 +16,13 @@ import ApplyConfirmation from "./forms/ApplyConfirmation";
 const steps = ["General Information", "Voluntary Disclosure", "Confirmation"];
 
 export default function ApplyForm() {
+  const { id } = useParams();
+  const job = jobs.find((j) => j.id === Number(id));
+  const navigate = useNavigate();
+
   const [currentStep, setCurrentStep] = useState(0);
   const [errors, setErrors] = useState({});
-  // const [touched, setTouched] = useState({});
+  const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -47,12 +55,14 @@ export default function ApplyForm() {
       }
       if (!formData.email.trim()) {
         newErrors.email = "Email is required";
+      } else if (!isValidEmail(formData.email.trim())) {
+        newErrors.email = "Invalid email format (user@example.com)";
       }
     }
 
     setErrors(newErrors);
 
-    return  Object.keys(newErrors).length === 0;
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleNext = () => {
@@ -63,7 +73,6 @@ export default function ApplyForm() {
     }
 
     if (currentStep === steps.length - 1) {
-
     }
   };
 
@@ -71,6 +80,14 @@ export default function ApplyForm() {
     if (currentStep > 0) {
       setCurrentStep((prev) => prev - 1);
     }
+  };
+
+  const handleSubmit = () => {
+    if (!validateStep()) return;
+
+    console.log("Submitting:", formData);
+
+    navigate(`/apply/${job.id}/success`);
   };
 
   const renderStep = () => {
@@ -95,8 +112,10 @@ export default function ApplyForm() {
   };
 
   return (
-    <div style={{ padding: "2rem" }}>
-      <h1>Application Form</h1>
+    <div className="application">
+      <h1 className="apply_title">
+        Applying for {job.title} at {job.company}
+      </h1>
 
       <Stepper activeStep={currentStep} alternativeLabel>
         {steps.map((label) => (
@@ -113,7 +132,11 @@ export default function ApplyForm() {
           Back
         </Button>
 
-        <Button variant="contained" onClick={handleNext}>
+        <Button
+          variant="contained"
+          onClick={currentStep === steps.length - 1 ? handleSubmit : handleNext}
+          // disabled={!validateStep()}
+        >
           {currentStep === steps.length - 1 ? "Submit" : "Next"}
         </Button>
       </div>

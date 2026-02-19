@@ -1,11 +1,10 @@
 .navbar {
   display: flex;
   justify-content: space-between !important;
-  align-items: center;
-  background-color: #333;
+  align-items: right;
+  background-color: #4d5453;
   color: #fff;
-  padding: 1rem;
-  /* max-width: 80%; */
+  max-width: 100%;
 }
 
 .navbar-left .logo {
@@ -13,9 +12,11 @@
   font-weight: bold;
   color: #fff;
   text-decoration: none;
+  padding-left: 50px;
 }
 
 .navbar-center .nav-links {
+  align-items: center;
   list-style-type: none;
   display: flex;
   margin: 0;

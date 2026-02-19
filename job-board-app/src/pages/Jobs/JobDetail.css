@@ -1,0 +1,20 @@
+.job_header {
+  background-color: #e6f4f5;
+  height: 150px;
+}
+
+.job_header_text {
+  max-width: 800px;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+.job_details {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.job_details .apply_btn {
+  align-items: right;
+}

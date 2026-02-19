@@ -14,7 +14,8 @@ export default function ApplyConfirmation({ formData }) {
         <strong>Email:</strong> {formData.email}
       </p>
       <p>
-        <strong>Authorized:</strong> {formData.authorized ? "Yes" : "No"}
+        <strong>Work Authorization:</strong>{" "}
+        {formData.authorized ? "Yes" : "No"}
       </p>
     </div>
   );

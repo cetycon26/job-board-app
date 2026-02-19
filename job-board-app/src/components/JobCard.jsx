@@ -1,19 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import "./JobCard.css";
+
+const applyButton = "#986A71";
+const theme = createTheme({
+  palette: {
+    orange: {
+      main: "#986A71",
+    },
+  },
+});
 
 export default function JobCard({ job }) {
   return (
-    <div>
-      <h5>{job.title}</h5>
-      <p>
-        <strong>{job.company}</strong>
-      </p>
-      <p>{job.location}</p>
+    <div className="job_card">
+      <h5 className="job_title">{job.title}</h5>
+      <div className="job_company">
+        {job.company} | {job.location}
+      </div>
 
-      <div className="job-tags">
+      <div className="job_tag_container">
         {(job?.details || []).map((tag, i) => (
-          <span key={i} style={{ border: "1px solid red", padding: "2px" }}>
+          <span key={i} className="job_tag">
             {tag}
           </span>
         ))}
@@ -23,7 +33,9 @@ export default function JobCard({ job }) {
         <Button>View Details</Button>
       </Link>
       <Link to={`/apply/${job.id}`} className="btn btn-apply">
-        <Button>Apply</Button>
+        <Button variant="contained" color="primary">
+          Apply
+        </Button>
       </Link>
     </div>
   );

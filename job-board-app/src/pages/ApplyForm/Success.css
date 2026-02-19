@@ -1,0 +1,14 @@
+.success {
+  max-width: 50rem;
+  padding: 2rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.success h1 {
+  margin-bottom: 2rem;
+}
+
+.company_detail {
+  color: #6fa996;
+}

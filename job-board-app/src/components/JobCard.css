@@ -1,0 +1,33 @@
+.job_card {
+  background-color: white;
+  border-radius: 4px;
+  filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.422));
+  margin-bottom: 2rem;
+  padding: 10px 20px;
+}
+
+.job_title {
+  font-weight: 800;
+  font-size: 20pt;
+  margin-bottom: 4px;
+}
+
+.job_company {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.job_tag {
+  font-size: 10pt;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.53);
+  border: 1px solid rgba(0, 0, 0, 0.53);
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px;
+  padding: 0.3rem;
+  margin-right: 5px;
+}
+
+.job_tag_container {
+  margin-bottom: 10px;
+}
